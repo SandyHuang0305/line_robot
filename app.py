@@ -43,8 +43,9 @@ def handle_message(event):
 
     if msg == 'hi':
         r = '你好'
-    elif msg == '你吃飯了嗎？'
-        r = '還沒耶'    
+    elif msg == '你吃飯了嗎？':
+        r = '還沒耶'  
+          
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))#回傳訊息
