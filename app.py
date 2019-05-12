@@ -41,7 +41,7 @@ def handle_message(event):
     msg = event.message.text
     r = ' 我看不懂你說甚麼' #預設回覆訊息
 
-    if msg == in['hi', 'Hi']:
+    if msg in['hi', 'Hi']:
         r = '你好'
     elif msg == '你吃飯了嗎？':
         r = '還沒耶' 
