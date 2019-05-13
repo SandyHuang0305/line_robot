@@ -50,7 +50,7 @@ def handle_message(event):
             sticker_id='52002738'
         )
         #line_bot_api.reply_message(event.reply_token, Sticker_Message)
-        global Sticker_Message    
+            global Sticker_Message    
     elif '哭哭' in msg:
         Sticker_Message = StickerSendMessage(
             package_id='11538',
