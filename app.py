@@ -49,34 +49,32 @@ def handle_message(event):
             sticker_id='52002738'
         )
         #line_bot_api.reply_message(event.reply_token, Sticker_Message)
-        elif '哭哭' in msg:
-            Sticker_Message = StickerSendMessage(
-                package_id='11538',
-                sticker_id='51626522'
-            )
-            #line_bot_api.reply_message(event.reply_token, Sticker_Message)
-        elif msg in ['累', '死', '想睡']:
-            Sticker_Message = StickerSendMessage(
-                package_id='11537',
-                sticker_id='52002757'
-            )    
-        line_bot_api.reply_message(
-            event.reply_token, 
-            Sticker_Message)
+    elif '哭哭' in msg:
+        Sticker_Message = StickerSendMessage(
+            package_id='11538',
+            sticker_id='51626522'
+        )
+        #line_bot_api.reply_message(event.reply_token, Sticker_Message)
+    elif ['累', '死', '想睡'] in msg:
+        Sticker_Message = StickerSendMessage(
+            package_id='11537',
+            sticker_id='52002757'
+        )    
+    line_bot_api.reply_message(event.reply_token, Sticker_Message)
 
     if msg in ['hi', 'Hi', '安安']: #寫成清單
         r = '你好'
-        elif msg in ['吃飯了嗎？', '你吃飯了嗎']:
-            r = '還沒耶' 
-        elif msg == '你是誰':
-            r = '我是line機器人'
-        elif '訂位' in msg:
-            r = '你想訂位是嗎？'         
+    elif msg in ['吃飯了嗎？', '你吃飯了嗎']:
+        r = '還沒耶' 
+    elif msg == '你是誰':
+        r = '我是line機器人'
+    elif '訂位' in msg:
+        r = '你想訂位是嗎？'         
 
-        #傳送訊息
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=r))#回傳文字訊息
+    #傳送訊息
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=r))#回傳文字訊息
 
 
 if __name__ == "__main__":
