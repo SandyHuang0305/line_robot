@@ -43,7 +43,7 @@ def handle_message(event):
 
     if msg in ['hi', 'Hi', '安安']: #寫成清單
         r = '你好'
-    elif  '你吃飯了嗎？'in msg:
+    elif msg in ['吃飯了嗎？']:
         r = '還沒耶' 
     elif msg == '你是誰':
         r = '我是line機器人'
