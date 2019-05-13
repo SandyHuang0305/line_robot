@@ -45,11 +45,16 @@ def handle_message(event):
 
     if '給我貼圖' in msg:
         Sticker_Message = StickerSendMessage(
-            package_id='2',
-            sticker_id='2'
+            package_id='11537',
+            sticker_id='52002738'
         )
         line_bot_api.reply_message(event.reply_token, Sticker_Message)
-        return
+        #return
+    elif '哭哭' in msg:
+        Sticker_Message = StickerSendMessage(
+            package_id='11538',
+            sticker_id='51626522'
+        )
 
     if msg in ['hi', 'Hi', '安安']: #寫成清單
         r = '你好'
