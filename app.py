@@ -41,7 +41,7 @@ def handle_message(event):
     #設定回覆訊息
     msg = event.message.text
 
-    r = ' 我看不懂你說甚麼' #預設回覆訊息
+    r = ' 我看不懂你在說甚麼' #預設回覆訊息
 
     if '給我貼圖' in msg:
         Sticker_Message = StickerSendMessage(
@@ -62,7 +62,19 @@ def handle_message(event):
         )    
         line_bot_api.reply_message(event.reply_token, Sticker_Message)
     
-        
+    elif '來打架阿' in msg:
+        Sticker_Message = StickerSendMessage(
+            package_id='11537',
+            sticker_id='52002767'
+        )    
+        line_bot_api.reply_message(event.reply_token, Sticker_Message)
+    
+     elif '還不睡嗎？' in msg:
+        Sticker_Message = StickerSendMessage(
+            package_id='11537',
+            sticker_id='52002770'
+        )    
+        line_bot_api.reply_message(event.reply_token, Sticker_Message)   
 
     if msg in ['hi', 'Hi', '安安']: #寫成清單
         r = '你好'
