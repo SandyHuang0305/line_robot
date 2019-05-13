@@ -38,12 +38,12 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg = event.message.text
+    msg = event.message.text#決定能回覆甚麼訊息
     r = ' 我看不懂你說甚麼' #預設回覆訊息
 
-    if msg in['hi', 'Hi']:
+    if msg in ['hi', 'Hi', '安安']: #寫成清單
         r = '你好'
-    elif msg == '你吃飯了嗎？':
+    elif  '你吃飯了嗎？'in msg:
         r = '還沒耶' 
     elif msg == '你是誰':
         r = '我是line機器人'
