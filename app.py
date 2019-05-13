@@ -55,13 +55,13 @@ def handle_message(event):
             sticker_id='51626522'
         )
         #line_bot_api.reply_message(event.reply_token, Sticker_Message)
-    elif ['累', '死', '想睡'] in msg:
+    elif '想睡' in msg:
         Sticker_Message = StickerSendMessage(
-            package_id='11537',
-            sticker_id='52002757'
+            package_id='11538',
+            sticker_id='51626513'
         )    
     line_bot_api.reply_message(event.reply_token, Sticker_Message)
-
+    
     if msg in ['hi', 'Hi', '安安']: #寫成清單
         r = '你好'
     elif msg in ['吃飯了嗎？', '你吃飯了嗎']:
@@ -70,7 +70,8 @@ def handle_message(event):
         r = '我是line機器人'
     elif '訂位' in msg:
         r = '你想訂位是嗎？'         
-
+    elif msg in ['累', '睏']:
+        r = '去休息阿'
     #傳送訊息
     line_bot_api.reply_message(
         event.reply_token,
