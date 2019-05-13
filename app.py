@@ -41,6 +41,7 @@ def handle_message(event):
     #設定回覆訊息
     msg = event.message.text
 
+
     r = ' 我看不懂你說甚麼' #預設回覆訊息
 
     if '給我貼圖' in msg:
@@ -49,7 +50,7 @@ def handle_message(event):
             sticker_id='52002738'
         )
         #line_bot_api.reply_message(event.reply_token, Sticker_Message)
-        
+        global Sticker_Message    
     elif '哭哭' in msg:
         Sticker_Message = StickerSendMessage(
             package_id='11538',
