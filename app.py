@@ -103,7 +103,7 @@ def handle_message(event):
     elif '你在想甚麼？' in msg:
         r = '在想妳啊'
 
-    elif ['我在想你' , '好想你啊'] in msg:
+    elif msg in ['我在想你' , '好想你啊']:
         r = '我也是~'   
     #傳送訊息
     line_bot_api.reply_message(
