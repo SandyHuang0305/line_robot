@@ -105,8 +105,8 @@ def handle_message(event):
         r = '我也是~' 
     elif msg in ['不快去睡嗎？', '還不去睡？']:
         r = '再等等' 
-    elif msg in ['乖點', '不要皮', ' 快去睡']:
-        r = '好~' or '好啦'       
+    elif msg in ['乖點', '不要皮', '快去睡']:
+        r = '好~'       
     #傳送訊息
     line_bot_api.reply_message(
         event.reply_token,
