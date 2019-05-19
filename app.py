@@ -110,7 +110,7 @@ def handle_message(event):
         r = '好~'
     elif msg in ['你在幹嘛？', '你在幹嘛', '你在做甚麼？', '你在做甚麼', '你在做什麼？',  '你在做什麼？']: 
         r = '在打程式囉~'
-    elif msg in ['想我嗎？', '有想我嗎']
+    elif msg in ['想我嗎？', '有想我嗎']:
         r = '有喔~'              
     #傳送訊息
     line_bot_api.reply_message(
